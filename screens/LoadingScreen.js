@@ -23,22 +23,30 @@ const LoadingScreen = () => {
   return (
     <SafeAreaView className="flex items-center justify-center h-[100%] w-[100%] bg-white">
 
-      <View className='w-[100%] h-[auto] flex-1 justify-center items-center mt-20'>
+      <View className='w-[100%] h-[auto] flex justify-center items-center mt-20'>
         <Image 
           source={require("../assets/get-started.png")}
           className="w-[80%] h-[auto] flex justify-center items-center m-2"
         />
 
-        <Text className="flex-1 text-2xl font-bold text-center text-black">
+        <Text className="flex text-2xl font-bold text-center text-black">
           Memories 🍃
         </Text>
       </View>
 
-          <View className='flex justify-start mb-10 bg-blue-400 w-[90%] h-[auto] m-5 rounded-xl p-5'>
-            <Text className="text-2xl font-bold text-center text-black">
-                Get Started
-            </Text>
-          </View>
+      <View className='flex justify-start bg-white border-blue-600 border-10 w-[90%] h-[auto] mt-10 mb-5 rounded-full p-4'>
+        <Text className="text-2xl font-bold text-center text-black">
+            Get Started
+        </Text>
+      </View>
+
+      <View className='flex justify-start mb-10 bg-blue-400 w-[90%] h-[auto] rounded-full p-4'>
+        <Text className="text-2xl font-bold text-center text-black">
+            Get Started
+        </Text>
+      </View>
+
+      <Text>By Signing up you agree to the terms of use and privacy policy</Text>
 
       {/* <Progress.Circle size={60} indeterminate={true} color='black' /> */}
 
