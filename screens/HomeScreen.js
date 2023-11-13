@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput, ScrollView } from 'react-native';
+import { View, Text, Image, TextInput, ScrollView, ImageBackground } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useLayoutEffect, useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
@@ -21,42 +21,64 @@ export default function HomeScreen() {
       }, []);
 
   return (
-    <SafeAreaView className="bg-white pt-1">
+    <SafeAreaView className="bg-white w-full h-full">
 
-        <View className="flex-row pb-3 mx-1 items-center space-x-2 px-3">
-
-            <Image
-                source={{
-                    uri: 'https://images.unsplash.com/photo-1699637341383-8a67b4d1adf3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                }}
-                className="h-10 w-full bg-gray-300"
-            />
-
-            <View>
-                <Text className="font-bold text-black text-2xl">Home is here.</Text>
-            </View>
-
-          {/* <Image
-              source={{
-                uri: 'https://cdn-icons-png.flaticon.com/512/6833/6833605.png'
-              }}
-              className="h-8 w-8 bg-gray-300 p-4 rounded-full"
-          />
-
-          <View className="flex-1">
-            <Text className="font-bold text-gray-400 text-xs">
-              Deliever Now!
-            </Text>
-
-            <Text className="font-bold text-xl">
-              Current Location
-              <ChevronDownIcon size={20} color="#00CCBB" />
-            </Text>
-
+        <ImageBackground
+          source={require("../assets/memories-home.jpg")}
+          className="w-full h-[300px]"
+        >
+          <View className='ml-5 mb-2 mt-4'>
+            <Text className="font-bold text-white text-2xl">PixelPulse</Text>
           </View>
+        </ImageBackground>
 
-          <UserIcon size={35} color="#00CCBB" /> */}
-        </View>
+        <ScrollView 
+          horizontal
+          className='w-auto h-[100px] bg-[#ebedee] flex flex-row flex-initial p-2'
+        >
+          <ImageBackground
+            source={require("../assets/memories-home.jpg")}
+            className="h-[80px] w-[80px] mr-2 rounded-xl overflow-hidden flex justify-end"
+          >
+            <Text className='text-white font-medium p-2'>January</Text>
+          </ImageBackground>
+
+          <ImageBackground
+            source={require("../assets/memories-home.jpg")}
+            className="h-[80px] w-[80px] mr-2 rounded-xl overflow-hidden flex justify-end"
+          >
+            <Text className='text-white font-medium p-2'>February</Text>
+          </ImageBackground>
+
+          <ImageBackground
+            source={require("../assets/memories-home.jpg")}
+            className="h-[80px] w-[80px] mr-2 rounded-xl overflow-hidden flex justify-end"
+          >
+            <Text className='text-white font-medium p-2'>March</Text>
+          </ImageBackground>
+
+          <ImageBackground
+            source={require("../assets/memories-home.jpg")}
+            className="h-[80px] w-[80px] mr-2 rounded-xl overflow-hidden flex justify-end"
+          >
+            <Text className='text-white font-medium p-2'>April</Text>
+          </ImageBackground>
+
+          <ImageBackground
+            source={require("../assets/memories-home.jpg")}
+            className="h-[80px] w-[80px] mr-2 rounded-xl overflow-hidden flex justify-end"
+          >
+            <Text className='text-white font-medium p-2'>June</Text>
+          </ImageBackground>
+
+          <ImageBackground
+            source={require("../assets/memories-home.jpg")}
+            className="h-[80px] w-[80px] mr-2 rounded-xl overflow-hidden flex justify-end"
+          >
+            <Text className='text-white font-medium p-2'>July</Text>
+          </ImageBackground>
+
+        </ScrollView>
 
     </SafeAreaView>
   )
