@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ImageBackground } from 'react-native'
+import { View, Text, SafeAreaView, ImageBackground, Image } from 'react-native'
 import React, { useEffect, useLayoutEffect } from 'react'
 import * as Animatable from 'react-native-animatable'
 // import * as Progress from 'react-native-progress'
@@ -21,21 +21,24 @@ const LoadingScreen = () => {
     // }, []);
 
   return (
-    <SafeAreaView className="flex items-center justify-center">
-        <ImageBackground
-            source={require("../assets/pink-tree.jpg")}
-            className="w-full h-full flex justify-end"
-        >
-            <View className='flex justify-start mb-10 bg-white w-[90%] h-[auto] m-5 rounded-full p-5'>
-                <Text className="text-xl font-bold text-center text-black">
-                    Hey Buddy !! 🚀
-                </Text>
+    <SafeAreaView className="flex items-center justify-center h-[100%] w-[100%] bg-white">
 
-                <Text className="text-xl font-bold text-center text-black">
-                    Waiting to connect to the server !!
-                </Text>
-            </View>
-        </ImageBackground>
+      <View className='w-[100%] h-[auto] flex-1 justify-center items-center mt-20'>
+        <Image 
+          source={require("../assets/get-started.png")}
+          className="w-[80%] h-[auto] flex justify-center items-center m-2"
+        />
+
+        <Text className="flex-1 text-2xl font-bold text-center text-black">
+          Memories 🍃
+        </Text>
+      </View>
+
+          <View className='flex justify-start mb-10 bg-blue-400 w-[90%] h-[auto] m-5 rounded-xl p-5'>
+            <Text className="text-2xl font-bold text-center text-black">
+                Get Started
+            </Text>
+          </View>
 
       {/* <Progress.Circle size={60} indeterminate={true} color='black' /> */}
 
